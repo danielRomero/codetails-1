@@ -1,0 +1,35 @@
+%h2.col.s12.header Paperclip
+=render partial: 'form'
+.clearfix
+
+%hr{style: 'margin: 100px 0px;'}
+-@paperclip_models.each do |paperclip_model|
+  -# IMAGE
+  %table
+    %thead
+      %tr
+        %th="1920x1680>"
+        %th="500x500>"
+        %th="250x250"
+        %th="100x100#"
+    %tbody
+      %tr
+        %td= image_tag paperclip_model.image.url(:original)
+        %td= image_tag paperclip_model.image.url(:large)
+        %td= image_tag paperclip_model.image.url(:medium)
+        %td= image_tag paperclip_model.image.url(:small)
+  -# FILE
+  %table
+    %thead
+      %tr
+        %th Name
+        %th URL
+        
+    %tbody
+      %tr
+        %td= image_tag paperclip_model.file.url(:thumb)
+        %td= link_to 'download', paperclip_model.file.url, target: 'blank'
+        
+  %hr{style: 'margin-top: 100px;'}
+  %hr{style: 'margin-bottom: 100px;'}
+= paginate @paperclip_models

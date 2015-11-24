@@ -1,0 +1,14 @@
+= form_for PaperclipModel.new, html: { multipart: true } do |f|
+  .file-field.input-field
+    .btn.waves-effect.waves-light
+      %span File
+      = f.file_field :file
+    .file-path-wrapper
+      <input class="file-path validate" type="text">
+  .file-field.input-field
+    .btn.waves-effect.waves-light
+      %span Image
+      = f.file_field :image
+    .file-path-wrapper
+      <input class="file-path validate" type="text">
+  =f.submit 'Pa subir', class: 'btn right'

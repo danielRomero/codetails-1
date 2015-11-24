@@ -1,0 +1,35 @@
+%h2.col.s12.header Carrierwave
+=render partial: 'form'
+
+
+%hr{style: 'margin: 100px 0px;'}
+-@carrierwave_models.each do |carrierwave|
+  -# IMAGE
+  %table
+    %thead
+      %tr
+        %th="1920x1680>"
+        %th="500x500>"
+        %th="250x250"
+        %th="100x100#"
+    %tbody
+      %tr
+        %td= image_tag carrierwave.image.original.url
+        %td= image_tag carrierwave.image.large.url
+        %td= image_tag carrierwave.image.medium.url
+        %td= image_tag carrierwave.image.small.url
+  -# FILE
+  %table
+    %thead
+      %tr
+        %th Name
+        %th URL
+        
+    %tbody
+      %tr
+        %td= image_tag carrierwave.file.url
+        %td= link_to 'download', carrierwave.file.url, target: 'blank'
+        
+  %hr{style: 'margin-top: 100px;'}
+  %hr{style: 'margin-bottom: 100px;'}
+= paginate @carrierwave_models

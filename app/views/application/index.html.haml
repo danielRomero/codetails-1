@@ -1,0 +1,18 @@
+%h1
+  Codetails 24-11-15
+  %small
+    Daniel Romero Esteban
+%h5
+  Carrierwave vs Paperclip vs Dragonfly sobre MongoId
+.collection
+  =link_to(carrierwaves_path,class: 'collection-item') do
+    Carrierwave
+    %span.badge=Carrierwave.count
+  
+  =link_to(paperclip_models_path,class: 'collection-item') do
+    Paperclip
+    %span.badge=PaperclipModel.count
+
+  =link_to(dragonfly_models_path,class: 'collection-item') do
+    Dragonfly
+    %span.badge=DragonflyModel.count

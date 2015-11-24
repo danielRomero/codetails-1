@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Codetails
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    %link{:href => "http://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css", :rel => "stylesheet"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"}
+    
+    = csrf_meta_tags
+  %body
+    =render partial: 'layouts/header'
+    .container
+      %p= flash[:notice]
+      = yield
