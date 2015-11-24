@@ -25,3 +25,5 @@ Carrierwave vs Paperclip vs Dragonfly ON Mongo
 
 4. Visit local
   http://localhost:3000/
+
+Slides http://slides.com/danielromero-1/codetails-1#/
