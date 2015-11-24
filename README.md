@@ -24,4 +24,4 @@ Carrierwave vs Paperclip vs Dragonfly ON Mongo
   ```
 
 4. Visit local
-  http://localhost:3000
+  http://localhost:3000/
