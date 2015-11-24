@@ -22,6 +22,6 @@ Carrierwave vs Paperclip vs Dragonfly ON Mongo
   ```
   $ rails server
   ```
-  
+
 4. Visit local
-  htt://localhost:3000
+  http://localhost:3000
