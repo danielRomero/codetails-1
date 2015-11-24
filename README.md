@@ -5,7 +5,7 @@ Carrierwave vs Paperclip vs Dragonfly ON Mongo
 
 2. Clone this repo
   ```
-  git clone REPO
+  git clone git@github.com:danielRomero/codetails-1.git
   ```
 
 3. Run Mongo server with 
